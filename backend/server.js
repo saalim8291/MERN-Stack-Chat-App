@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8000;
 app.get('/api/chat/', (req, res) => {
     res.send(chats)
     // const singleChat = chats.find(chat => chat._id===req.params.id);
-    res.send(singleChat)
+    // res.send(singleChat)
 })
 
 app.get('/api/chat/:id', (req, res) => {
