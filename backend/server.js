@@ -4,6 +4,8 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
+const {notFound, errorHandler} = require('./middleware/errorMiddleware.js');
+
 const userRoutes = require('./routes/userRoutes');
 
 
@@ -15,9 +17,13 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use('/api/user/', userRoutes);
+app.use('/api/chat', chatRoutes);
+
+app.use(notFound);
+app.use(errorHandler);
 
 // app.get('/api/chat/:id', (req, res) => {
-//     // res.send(chats)
+    // res.send(chats)
 //     const singleChat = chats.find(chat => chat._id===req.params.id);
 //     res.send(singleChat)
 // })

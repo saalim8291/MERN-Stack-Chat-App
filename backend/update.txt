@@ -1,0 +1,2 @@
+-> 9th video -> User Authentication in MERN Stack with JWT and Bcrypt -> watched till 25.00
+video no 10 -> Search User and Create Chat APIs - MERN Stack Chat App with Socket.IO #10 -> watch till 8.00
